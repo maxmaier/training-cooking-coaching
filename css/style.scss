@@ -29,7 +29,8 @@ header{
 	width: 100%;
 	min-height: 10em;
 	background-color: red;
-	background: url('../img/header_bg_2.jpg') no-repeat;
+	background: url('../img/header_bg_2.jpg');
+	background-repeat: no-repeat;
 	background-size: 100%;
 	color: white;
 	overflow: visible;
@@ -155,7 +156,7 @@ header-avatars{
 .tile .half-tile{
 	position: relative;
 	width: 50%;
-	background-color: yellow;
+	background-color: rgba(203, 88, 42, 1);
 	height: 100%;
 	float: left;
 }
@@ -165,7 +166,7 @@ header-avatars{
 	margin-right: 5px;
 }
 
-.tile-regular .half-tile:first-child, .tile-reversed .half-tile:nth-child(2){
+.tile-regular .half-tile:first-child, .tile-reversed .half-tile+.half-tile{
 	position: relative;
 	width: 46%;
 	height: 96%;
@@ -174,22 +175,22 @@ header-avatars{
 	padding: 2%;	
 	@include bg-gradient-orange();
 }
-.tile-regular .half-tile:nth-child(2), .tile-reversed .half-tile:first-child{
+.tile-regular .half-tile+.half-tile, .tile-reversed .half-tile:first-child{
 	background: url('../img/coach.jpg') no-repeat;
 	background-size: cover;
 }
 
-.tile-training .half-tile:nth-child(2) {
+.tile-training .half-tile+.half-tile {
 	background-image: url('../img/training.jpg');
 }
 .tile object{
 	width: 30%;
 }
-.tile-resilienz .half-tile:nth-child(2) {
+.tile-resilienz .half-tile+.half-tile {
 	background-image: url('../img/resilienz.jpg');
 }
 
-.tile-museum .half-tile:nth-child(2) {
+.tile-museum .half-tile+.half-tile {
 	background-image: url('../img/museum.jpg');
 }
 
@@ -356,7 +357,10 @@ header{
 	
 		
 			li{
-				display: inline-block;
+				display:-moz-inline-stack;
+				display:inline-block;
+				zoom:1;
+				*display:inline;
 				font-size: 0.9em;
 				//float: right;
 				margin-left: 1.5em;
@@ -472,7 +476,7 @@ nav.main-nav-desktop{
 				width: 160px;
 				height: 100px;
 				padding-bottom: 20px;
-				background-color: rgba(255,255,255,0.5);
+				background-color: rgba(255,255,255,1);
 				
 				ul{
 					margin-left: 40px;
@@ -606,7 +610,7 @@ header{
 .tile:nth-child(odd){
 	margin-right: 0.5%;
 }
-.tile-regular .half-tile:nth-child(2), .tile-reversed .half-tile:first-child{
+.tile-regular .half-tile+.half-tile, .tile-reversed .half-tile:first-child{
 	background-size: 130%;
 	background-position:center;
 
@@ -616,7 +620,7 @@ header{
 	-o-transition: background-size 4s ease;
 	-webkit-transition: background-size 4s ease;
 }
-.tile-regular:hover .half-tile:nth-child(2), .tile-reversed:hover .half-tile:first-child{
+.tile-regular:hover .half-tile+.half-tile, .tile-reversed:hover .half-tile:first-child{
 	background-size: 140%;
 }
 .tile-offer{
