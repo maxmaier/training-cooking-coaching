@@ -1,0 +1,347 @@
+@import 'normalize';
+@import 'variables';
+
+header{
+	min-height: 530px;
+	overflow: hidden;
+}
+
+.utility-bar-desktop{
+	position: relative;
+	display: block;
+	background-color: rgba(51, 51, 51, 0.8);
+	width: 100%;
+	height: 30px;
+	margin-bottom: 5px;
+	
+	div{
+		width: $frame-width;
+		min-width: $frame-min-width; 
+		max-width: $frame-max-width;
+		@include align-center();
+
+		ul{
+			float: right;
+			position: relative;
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 7px;
+	
+		
+			li{
+				display: inline-block;
+				font-size: 0.9em;
+				//float: right;
+				margin-left: 1.5em;
+			}		
+		}
+	}
+}
+
+.branding-burger-container{
+	position: relative;
+	background-color: rgba(203, 88, 42, 0.7);
+	height: 4em;
+}
+
+.inner-branding-burger-container{
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width; 	
+	@include align-center();
+	
+	.logo-home, .logo-home img{
+		margin-top: 5px;
+		margin-left: 0px;
+		width: 15em;
+		position: absolute;	
+	}
+	.logo-link{
+		display: block;
+		width: 15em;
+		height: 3.8em;
+	}
+}
+
+nav.main-nav li{
+	display: inline-block;
+	float: right;
+}
+
+
+
+nav.main-nav-desktop{
+	font-style: italic;
+	display: block;
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width;
+	float: right;
+
+	ul{
+		margin-top: -2.7em;
+	
+		li{
+			font-size: 1.1em;
+			display: inline-block;
+			float: right;
+			margin-left: 1em;
+		}
+	}
+}
+
+.nav-icon{
+	display: none;
+}
+
+.nav-container-phone{
+	display: none;
+}
+
+/*
+	Header Interaction
+*/
+.header-interactions{
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width;
+	height: 330px;			
+	@include align-center();
+	overflow: hidden;
+	
+	.header-topics{
+		display: block;
+		//position: relative;
+		max-width: $frame-max-width; 	
+		height: 50px;
+		float: left;
+		margin-top: 150px;
+		z-index: 10;
+		position: relative;
+		
+		.header-topic {
+		
+			float: left;
+			margin-right: 4px;
+			z-index: 100;
+				
+		
+			h3{
+				display: block;
+				width: 160px;
+				height: 48px;
+				padding-top: 8px; 
+				text-align: center;	
+				color: #fff;
+				font-size: 30px;
+				font-style: italic;
+				font-weight: normal;
+				background-color: red;
+				cursor: pointer;
+				@include bg-gradient-orange();	
+			}
+			
+			.header-topics-details{
+				width: 160px;
+				height: 100px;
+				padding-bottom: 20px;
+				background-color: rgba(255,255,255,0.5);
+				
+				ul{
+					margin-left: 40px;
+					padding-top: 10px;				
+					color: #000;
+					list-style-image: url('../img/tick.png');
+				}
+				
+				a.header-topic-button{
+					display: block;
+					color: #fff;
+					width: 70px;
+					margin-top: 8px;
+					padding: 7px 10px 7px 10px;
+					text-align: center;
+					@include bg-gradient-orange();
+					@include align-center();
+					@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));
+	
+				}
+			}
+		}
+	}
+	
+	.header-avatars{
+		display: block;
+		width: 100%;
+		height: 544px;
+		right: 100px;
+		top: 0px;
+		right: 0px;
+		margin-top: -5px;
+		overflow: hidden;
+		position: relative;
+		z-index: 0;
+		
+		div{
+			float: right;
+		
+			.header-avatar{
+				height: 544px;	
+				float: left;
+				margin-left: -100px;
+				background-repeat: no-repeat;
+			}
+			.ha-training{
+				width: 400px;
+				margin-left: 0px;
+			}
+			.ha-training-1{
+				background-image: url('../img/ha_training_1.png');
+		
+			}
+			.ha-training-2{
+				background-image: url('../img/ha_training_2.png');
+		
+			}
+			.ha-cooking{
+				background-image: url('../img/header_ava_2.png');
+				width: 177px;
+				
+			}
+			.ha-coaching{
+				width: 250px;
+			}
+			.ha-coaching-1{
+				background-image: url('../img/ha_coaching_1.png');
+			}
+			.ha-coaching-2{
+				background-image: url('../img/ha_coaching_2.png');
+		
+			}
+		}
+	}
+}
+/*
+	Main content
+*/
+
+header{
+	position: relative;
+}
+
+.main-content{
+	position: relative;
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width; 
+	margin-top: -100px;
+	overflow: hidden;
+	@include align-center();
+
+}
+.main-column{
+	position: relative;
+	width: 75%;
+	margin-right: 0.5%;
+	float: left;
+}
+
+.right-column{
+	float: left;
+	position: relative;
+	width: 24.5%;
+	padding-top: 10px;
+	
+	h3{
+		
+	}
+	.visitenkarte{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		background-color: #89603b;
+		
+		img{
+			float: left;
+			margin-right: 20px;
+		}
+	
+	}
+}
+.tile{
+	float: left;
+	width: 49.75%;
+}
+.tile:nth-child(odd){
+	margin-right: 0.5%;
+}
+.tile-regular .half-tile:nth-child(2), .tile-reversed .half-tile:first-child{
+	background-size: 130%;
+	background-position:center;
+
+	transition: background-size 4s ease;
+	-moz-transition: background-size 4s ease;
+	-ms-transition: background-size 4s ease;
+	-o-transition: background-size 4s ease;
+	-webkit-transition: background-size 4s ease;
+}
+.tile-regular:hover .half-tile:nth-child(2), .tile-reversed:hover .half-tile:first-child{
+	background-size: 140%;
+}
+.tile-offer{
+	height: 9em;
+	width: 45.75%;
+	padding: 0.5em 2% 0.5em 2%;
+	
+}
+footer{
+	line-height: 150%;
+	
+	a{
+		color: #fff;
+	}
+	
+	address{
+		font-style: normal;
+	}
+
+	.upper-footer{
+		padding-top: 15px;
+	
+	}
+	.upper-footer-inner{
+		height: 8em;
+		width: $frame-width;
+		min-width: $frame-min-width; 
+		max-width: $frame-max-width; 
+		margin-top: 15px;
+		margin-left: $frame-margin;
+		margin-right: $frame-margin;
+		@include align-center();
+
+	}
+	.upper-footer-column{
+		float: left;
+		margin-right: 3%;
+	}
+	.upper-footer-column-1{
+		width: 20%;
+	}
+	.upper-footer-column-2{
+		width: 22%;
+	}
+	.upper-footer-column-3{
+		width: 15%;
+	}
+	.upper-footer-column-4{
+		width: 27%;
+	}
+	
+	object.logo-home, object.logo-home img{
+		margin-top: 5px;
+		width: 98%;
+	}
+
+}
