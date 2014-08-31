@@ -895,19 +895,24 @@ ul.lower-utility {
           margin-left: -200px;
           background-repeat: no-repeat; }
         .header-interactions .header-avatars div .ha-training {
-          margin-left: 0px; }
+          margin-left: 0px;
+          background-image: url("../img/ha_training.png"); }
         .header-interactions .header-avatars div .ha-training-1 {
-          background-image: url("../img/ha_training_1.png"); }
+          background-position: 0px -450px; }
         .header-interactions .header-avatars div .ha-training-2 {
-          background-image: url("../img/ha_training_2.png"); }
+          background-position: 0px 0px; }
+        .header-interactions .header-avatars div .ha-cooking {
+          background-image: url("../img/ha_cooking.png"); }
         .header-interactions .header-avatars div .ha-cooking-1 {
-          background-image: url("../img/ha_cooking_1.png"); }
+          background-position: 0px -450px; }
         .header-interactions .header-avatars div .ha-cooking-2 {
-          background-image: url("../img/ha_cooking_2.png"); }
+          background-position: 0px 0px; }
+        .header-interactions .header-avatars div .ha-coaching {
+          background-image: url("../img/ha_coaching.png"); }
         .header-interactions .header-avatars div .ha-coaching-1 {
-          background-image: url("../img/ha_coaching_1.png"); }
+          background-position: 0px -450px; }
         .header-interactions .header-avatars div .ha-coaching-2 {
-          background-image: url("../img/ha_coaching_2.png"); }
+          background-position: 0px 0px; }
 
   /*
   	Main content
