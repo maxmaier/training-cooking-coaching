@@ -1,7 +1,8 @@
 @import 'normalize';
 @import 'variables';
 
-header{
+
+header div.header-box{
 	min-height: 530px;
 	overflow: hidden;
 }
@@ -67,14 +68,14 @@ header{
 	}
 }
 
-nav.main-nav li{
+nav div.main-nav li{
 	display: inline-block;
 	float: right;
 }
 
 
 
-nav.main-nav-desktop{
+nav div.main-nav-desktop{
 	font-style: italic;
 	display: block;
 	width: $frame-width;
@@ -87,6 +88,7 @@ nav.main-nav-desktop{
 	
 		li{
 			font-size: 1.1em;
+			display: inline;
 			display: inline-block;
 			float: right;
 			margin-left: 1em;
@@ -231,7 +233,7 @@ nav.main-nav-desktop{
 	Main content
 */
 
-header{
+header div.header-box{
 	position: relative;
 }
 

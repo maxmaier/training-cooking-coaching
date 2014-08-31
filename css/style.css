@@ -382,7 +382,7 @@ body {
   font-family: 'Alegreya Sans', sans-serif;
   background-color: #f8f3ea; }
 
-header {
+div.header-box {
   position: relative;
   width: 100%;
   min-height: 10em;
@@ -392,17 +392,17 @@ header {
   background-size: 100%;
   color: white;
   overflow: visible; }
-  header a {
+  div.header-box a {
     color: #fff;
     text-decoration: none; }
-  header .logo-home, header .logo-home img {
+  div.header-box .logo-home, div.header-box .logo-home img {
     width: 12em;
     margin-top: 2px;
     margin-left: 10px; }
-  header a.logo-link {
+  div.header-box a.logo-link {
     position: relative;
     display: inline-block; }
-  header a.logo-link:after {
+  div.header-box a.logo-link:after {
     content: "";
     position: absolute;
     top: 0;
@@ -428,7 +428,7 @@ header {
   float: left;
   background-color: red; }
 
-nav.main-nav-desktop {
+nav div.main-nav-desktop {
   display: none; }
 
 .nav-icon {
@@ -706,7 +706,7 @@ ul.lower-utility {
   float: right; }
 
 @media only screen and (min-width: 680px) {
-  header {
+  header div.header-box {
     min-height: 530px;
     overflow: hidden; }
 
@@ -759,21 +759,22 @@ ul.lower-utility {
       width: 15em;
       height: 3.8em; }
 
-  nav.main-nav li {
+  nav div.main-nav li {
     display: inline-block;
     float: right; }
 
-  nav.main-nav-desktop {
+  nav div.main-nav-desktop {
     font-style: italic;
     display: block;
     width: 80%;
     min-width: 900px;
     max-width: 1200px;
     float: right; }
-    nav.main-nav-desktop ul {
+    nav div.main-nav-desktop ul {
       margin-top: -2.7em; }
-      nav.main-nav-desktop ul li {
+      nav div.main-nav-desktop ul li {
         font-size: 1.1em;
+        display: inline;
         display: inline-block;
         float: right;
         margin-left: 1em; }
@@ -916,7 +917,7 @@ ul.lower-utility {
   /*
   	Main content
   */
-  header {
+  header div.header-box {
     position: relative; }
 
   .main-content {
