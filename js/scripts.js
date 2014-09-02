@@ -1,28 +1,9 @@
-$( document ).ready(function() {
 
-	console.log('scripts.js is being executed.');
-
-	$('.nav-icon').bind('click', function(){
-		showResponsiveNav();
-	});
-
-	$('.header-topic-training .header-topics-details').hide();
-	$('.header-topic-cooking .header-topics-details').hide();
-	$('.header-topic-coaching .header-topics-details').hide();
-	
-	/*$('.ha-training').css('opacity', 0.6);
-	$('.ha-cooking').css('opacity', 0.6);
-	$('.ha-coaching').css('opacity', 0.6);*/
-
-	
-	bindEvents();
-	
-});
 
 function bindEvents(){
-	$('.header-topic-training h3').bind('click', function(){ showDetail('training'); });	
-	$('.header-topic-cooking h3').bind('click', function(){ showDetail('cooking'); });
-	$('.header-topic-coaching h3').bind('click', function(){ showDetail('coaching'); });
+	$('.header-topic-training h3').on('click', function(){ showDetail('training'); });	
+	$('.header-topic-cooking h3').on('click', function(){ showDetail('cooking'); });
+	$('.header-topic-coaching h3').on('click', function(){ showDetail('coaching'); });
 };
 
 function showDetail(myDetail){
@@ -60,7 +41,7 @@ function showDetail(myDetail){
 function showResponsiveNav(){
 	$('.nav-icon').off('click');
 	$('.nav-container-phone').slideDown();
-	$('.nav-icon').bind('click', function(){
+	$('.nav-icon').on('click', function(){
 		hideResponsiveNav();
 	});
 };
@@ -68,7 +49,28 @@ function showResponsiveNav(){
 function hideResponsiveNav(){
 	$('.nav-icon').off('click');
 	$('.nav-container-phone').slideUp();
-	$('.nav-icon').bind('click', function(){
+	$('.nav-icon').on('click', function(){
 		showResponsiveNav();
 	});	
 };
+
+
+
+$( document ).ready(function() {
+
+
+	$('.nav-icon').on('click', function(){
+		showResponsiveNav();
+	});
+
+	$('.header-topic-training .header-topics-details').hide();
+	$('.header-topic-cooking .header-topics-details').hide();
+	$('.header-topic-coaching .header-topics-details').hide();
+	
+	
+
+	
+	bindEvents();
+	
+
+});
