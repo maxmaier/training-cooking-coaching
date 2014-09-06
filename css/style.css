@@ -376,10 +376,12 @@ a {
   text-decoration: none; }
 
 body {
+  font-family: 'Alegreya Sans', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
   position: absolute;
   top: 0px;
   width: 100%;
-  font-family: 'Alegreya Sans', sans-serif;
   background-color: #f8f3ea; }
 
 div.header-box {
@@ -469,7 +471,7 @@ header-avatars {
 
 .main-content h4 {
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic; }
 
 .main-column h4 {
@@ -533,7 +535,7 @@ header-avatars {
 .tile-training .half-tile + .half-tile {
   background-image: url("../img/training.jpg"); }
 
-.tile object {
+.tile img.picto {
   width: 30%; }
 
 .tile-resilienz .half-tile + .half-tile {
@@ -612,8 +614,8 @@ header-avatars {
   .right-column h3 {
     text-align: center;
     font-size: 23px;
-    font-style: italic;
-    font-weight: normal; }
+    font-weight: 400;
+    font-style: italic; }
   .right-column a {
     color: #fff; }
   .right-column .visitenkarte {
@@ -743,7 +745,7 @@ ul.lower-utility {
   .branding-burger-container {
     position: relative;
     background-color: rgba(203, 88, 42, 0.7);
-    height: 4em; }
+    height: 4.1em; }
 
   .inner-branding-burger-container {
     width: 80%;
@@ -751,7 +753,7 @@ ul.lower-utility {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-    .inner-branding-burger-container .logo-home, .inner-branding-burger-container .logo-home img {
+    .inner-branding-burger-container img.logo-home {
       margin-top: 5px;
       margin-left: 0px;
       width: 15em;
@@ -766,6 +768,7 @@ ul.lower-utility {
     float: right; }
 
   nav div.main-nav-desktop {
+    font-weight: 400;
     font-style: italic;
     display: block;
     width: 80%;
@@ -818,8 +821,8 @@ ul.lower-utility {
           text-align: center;
           color: #fff;
           font-size: 30px;
+          font-weight: 400;
           font-style: italic;
-          font-weight: normal;
           background-color: red;
           cursor: pointer;
           background-color: #cb582a;
@@ -1006,7 +1009,7 @@ ul.lower-utility {
       width: 15%; }
     footer .upper-footer-column-4 {
       width: 27%; }
-    footer object.logo-home, footer object.logo-home img {
+    footer img.logo-home {
       margin-top: 5px;
       width: 98%; } }
 
