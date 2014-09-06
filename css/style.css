@@ -399,6 +399,8 @@ div.header-box {
     width: 12em;
     margin-top: 2px;
     margin-left: 10px; }
+  div.header-box .logo-home {
+    color: green; }
   div.header-box a.logo-link {
     position: relative;
     display: inline-block; }
@@ -532,8 +534,7 @@ header-avatars {
   background-image: url("../img/training.jpg"); }
 
 .tile object {
-  width: 30%;
-  color: red; }
+  width: 30%; }
 
 .tile-resilienz .half-tile + .half-tile {
   background-image: url("../img/resilienz.jpg"); }
