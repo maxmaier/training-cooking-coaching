@@ -841,7 +841,8 @@ ul.lower-utility {
           background: radial-gradient(ellipse at center, #df8b40 0%, #b86223 100%);
           /* W3C */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df8b40', endColorstr='#b86223',GradientType=1 );
-          /* IE6-8 fallback on horizontal gradient */ }
+          /* IE6-8 fallback on horizontal gradient */
+          opacity: 0.8; }
         .header-interactions .header-topics .header-topic .header-topics-details {
           width: 160px;
           height: 100px;

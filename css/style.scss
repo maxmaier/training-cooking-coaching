@@ -457,6 +457,7 @@ nav div.main-nav-desktop{
 		z-index: 10;
 		position: relative;
 		
+		
 		.header-topic {
 		
 			float: left;
@@ -477,6 +478,7 @@ nav div.main-nav-desktop{
 				background-color: red;
 				cursor: pointer;
 				@include bg-gradient-orange();	
+				opacity: 0.8;
 			}
 			
 			.header-topics-details{
