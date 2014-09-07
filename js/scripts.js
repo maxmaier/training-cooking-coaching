@@ -11,77 +11,6 @@ function bindEvents(){
 	$('.header-topic-cooking h3').mouseout('click', function(){ mouseOutDetail('cooking'); });
 	$('.header-topic-coaching h3').mouseout('click', function(){ mouseOutDetail('coaching'); });
 };
-/*
-function showDetail(myDetail){
-
-	if($('.header-topic-training .header-topics-details').is(':animated') != true){
-		
-		if($('.header-topic-training .header-topics-details').css('display') != 'none'){
-			$('.header-topic-training .header-topics-details').slideUp();
-		}
-		if($('.header-topic-cooking .header-topics-details').css('display') != 'none'){
-			$('.header-topic-cooking .header-topics-details').slideUp();
-		}
-		if($('.header-topic-coaching .header-topics-details').css('display') != 'none'){
-			$('.header-topic-coaching .header-topics-details').slideUp();
-		}
-		
-		if(currentHeaderDetail != myDetail){
-			$('.header-topic-' + myDetail + ' .header-topics-details').slideDown('');
-		}
-
-		
-
-		$('.header-topic').each(function(i, obj) {
-			if($(this + ' .header-topics-details').css('display') != 'none'){		
-				$(this + ' .header-topics-details').slideUp();	
-			}
-		});
-
-		$('.header-topic').each(function(i, obj) {
-			if(jQuery(this).find(".header-topics-details").css('display') != 'none'){		
-				jQuery(this).find(".header-topics-details").slideUp();	
-			}
-		});
-	}
-
-	
-	$('.header-topic-cooking .header-topics-details').slideUp();
-	$('.header-topic-coaching .header-topics-details').slideUp();
-	
-	$('.header-topic-training h3').animate({opacity: 0.8}, {queue: false, duration: 500});
-	$('.header-topic-cooking h3').animate({opacity: 0.8}, {queue: false, duration: 500});
-	$('.header-topic-coaching h3').animate({opacity: 0.8}, {queue: false, duration: 500});
-	
-
-	if($('.ha-training').hasClass('ha-training-2')){
-		$('.ha-training').removeClass('ha-training-2');
-		$('.ha-training').addClass('ha-training-1');
-	}
-	if($('.ha-cooking').hasClass('ha-cooking-2')){
-		$('.ha-cooking').removeClass('ha-cooking-2');
-		$('.ha-cooking').addClass('ha-cooking-1');
-	}
-	if($('.ha-coaching').hasClass('ha-coaching-2')){
-		$('.ha-coaching').removeClass('ha-coaching-2');
-		$('.ha-coaching').addClass('ha-coaching-1');
-	}
-	
-	$('.ha-' + myDetail).removeClass('ha-' + myDetail + '-1');
-	$('.ha-' + myDetail).addClass('ha-' + myDetail + '-2');
-	
-	
-	$('.header-topic-' + myDetail + ' h3').animate({opacity: 1.0},{queue: false, duration: 500});
-
-	if(currentHeaderDetail != myDetail){
-		$('.header-topic-' + myDetail + ' .header-topics-details').slideDown('');
-	}
-	
-	currentHeaderDetail = myDetail;
-
-};
-
-*/
 
 function showDetail(myDetail){
 
@@ -100,12 +29,20 @@ function showDetail(myDetail){
 	$('.ha-' + myDetail).removeClass('ha-' + myDetail + '-1');
 	$('.ha-' + myDetail).addClass('ha-' + myDetail + '-2');
 
-	if(myDetail == 'training'){
-		if(myDetail == currentHeaderDetail){
+	if(myDetail == 'training'){  // If the user clicked the "Training" button...
+		
+		if(myDetail == currentHeaderDetail){ // ...and the currently active button is the same as the one that just got clicked.
 			$('.header-topic-' + myDetail + ' .header-topics-details').slideUp();
 			currentHeaderDetail = "blank";
 		}
-			else{
+			else{ // ...or the currently active button is not the same as the one that just got clicked.
+				if($('.header-topic-cooking h3').css("opacity") == 1){
+					$('.header-topic-cooking h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+				}
+				if($('.header-topic-coaching h3').css("opacity") == 1){
+					$('.header-topic-coaching h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+				}
+			
 				$('.header-topic-' + myDetail + ' .header-topics-details').slideDown();
 				$('.header-topic-cooking .header-topics-details').slideUp();
 				$('.header-topic-coaching .header-topics-details').slideUp();
@@ -118,6 +55,13 @@ function showDetail(myDetail){
 				currentHeaderDetail = "blank";
 			}
 				else{
+					if($('.header-topic-training h3').css("opacity") == 1){
+						$('.header-topic-training h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+					}
+					if($('.header-topic-coaching h3').css("opacity") == 1){
+						$('.header-topic-coaching h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+					}
+	
 					$('.header-topic-' + myDetail + ' .header-topics-details').slideDown();			
 					$('.header-topic-training .header-topics-details').slideUp();
 					$('.header-topic-coaching .header-topics-details').slideUp();
@@ -131,6 +75,13 @@ function showDetail(myDetail){
 					currentHeaderDetail = "blank";
 				}
 					else{
+						if($('.header-topic-training h3').css("opacity") == 1){
+							$('.header-topic-training h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+						}
+						if($('.header-topic-cooking h3').css("opacity") == 1){
+							$('.header-topic-cooking h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+						}
+						
 						$('.header-topic-' + myDetail + ' .header-topics-details').slideDown();			
 						$('.header-topic-training .header-topics-details').slideUp();
 						$('.header-topic-cooking .header-topics-details').slideUp();	
@@ -156,7 +107,7 @@ function mouseInDetail(myDetail){
 function mouseOutDetail(myDetail){
 	//alert("test");
 	if(currentHeaderDetail != myDetail){
-	$('.header-topic-' + myDetail + ' h3').animate({opacity: 0.8}, {queue: false, duration: 500});
+		$('.header-topic-' + myDetail + ' h3').animate({opacity: 0.8}, {queue: false, duration: 500});
 	}
 };
 
