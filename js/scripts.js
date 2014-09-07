@@ -1,6 +1,8 @@
 var currentHeaderDetail = "blank";
 
 function bindEvents(){
+
+	// the following are mouse events required for the header interaction on home.
 	$('.header-topic-training h3').on('click', function(){ showDetail('training'); });	
 	$('.header-topic-cooking h3').on('click', function(){ showDetail('cooking'); });
 	$('.header-topic-coaching h3').on('click', function(){ showDetail('coaching'); });
