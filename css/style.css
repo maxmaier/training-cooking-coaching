@@ -384,10 +384,19 @@ body {
   width: 100%;
   background-color: #f8f3ea; }
 
+div.inner-header {
+  background-image: url("../img/header_ava_mobile.png");
+  background-repeat: no-repeat;
+  background-size-y: 5em;
+  background-position: right top;
+  height: 14em;
+  width: 100%;
+  display: block; }
+
 div.header-box {
   position: relative;
   width: 100%;
-  min-height: 10em;
+  min-height: 14em;
   background-color: red;
   background: url("../img/header_bg_2.jpg");
   background-repeat: no-repeat;
@@ -424,6 +433,9 @@ div.header-box {
   -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75); }
 
+.inner-branding-burger-container {
+  height: 3em; }
+
 .header-logo {
   height: 2.4em;
   width: 4em;
@@ -436,32 +448,46 @@ nav div.main-nav-desktop {
   display: none; }
 
 .nav-icon {
-  height: 2.4em;
-  width: 2.4em;
-  margin: 0.3em 0.3em 0 0;
-  background-color: red;
+  height: 2.0em;
+  width: 2.3em;
+  margin: -2.8em 0.8em 0 0;
   float: right;
-  cursor: pointer; }
+  cursor: pointer;
+  background: url("../img/nav.svg"), no-repeat;
+  background-size: 2.3em 2.3em; }
 
 .nav-container-phone {
   width: 100%;
-  padding-bottom: 1.5em;
   background-color: #b44b20;
-  overflow: hidden;
+  overflow: scroll;
   z-index: 10;
-  display: none; }
+  display: none;
+  position: absolute;
+  z-index: 100; }
 
-.nav-container-phone nav {
-  width: 44%;
-  margin-left: 6%;
-  float: left;
-  position: relative;
-  display: block; }
-  .nav-container-phone nav i {
-    margin-top: 0.7em;
-    list-style: none;
-    font-size: 1.3em;
-    line-height: 100%; }
+.nav-container-phone {
+  position: absolute;
+  z-index: 100; }
+  .nav-container-phone nav {
+    width: 50%;
+    float: left;
+    position: relative;
+    display: block; }
+    .nav-container-phone nav li {
+      padding-top: 0.7em;
+      padding-bottom: 0.7em;
+      padding-left: 1em;
+      display: block;
+      list-style: none;
+      font-size: 1.4em;
+      line-height: 100%; }
+      .nav-container-phone nav li a:after {
+        content: ">";
+        margin-left: 0.4em; }
+  .nav-container-phone nav.utility-bar li:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .nav-container-phone nav.main-nav ul li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1); }
 
 .header-topics {
   display: none; }
@@ -588,6 +614,7 @@ header-avatars {
     color: #2c2718; }
 
 .right-column {
+  display: none;
   width: 100%;
   margin-bottom: 0.3em;
   color: white;
@@ -749,6 +776,7 @@ ul.lower-utility {
 
   .inner-branding-burger-container {
     width: 80%;
+    height: 4.1em;
     min-width: 900px;
     max-width: 1200px;
     margin-left: auto;
@@ -766,6 +794,9 @@ ul.lower-utility {
   nav div.main-nav li {
     display: inline-block;
     float: right; }
+
+  nav div.main-nav li a:hover {
+    text-decoration: underline; }
 
   nav div.main-nav-desktop {
     font-weight: 400;
@@ -943,6 +974,7 @@ ul.lower-utility {
     float: left; }
 
   .right-column {
+    display: block;
     float: left;
     position: relative;
     width: 24.5%;

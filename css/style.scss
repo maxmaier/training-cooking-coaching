@@ -26,16 +26,27 @@ body{
 	width: 100%;
 	background-color: #f8f3ea;
 }
+div.inner-header{
+		background-image: url("../img/header_ava_mobile.png");
+		background-repeat: no-repeat;
+		background-size-y: 5em;
+		background-position: right top;
+		height: 14em;
+		width: 100%;
+		display: block;
+	}
 div.header-box{
 	position: relative;
 	width: 100%;
-	min-height: 10em;
+	min-height: 14em;
 	background-color: red;
 	background: url('../img/header_bg_2.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	color: white;
 	overflow: visible;
+
+	
 
 	a{
 		color: #fff;
@@ -73,7 +84,9 @@ div.header-box{
 	background-color: rgba(203, 88, 42, 1);
 	@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));	
 }
-
+.inner-branding-burger-container{
+	height: 3em;
+}
 .header-logo{
 	height: 2.4em;
 	width: 4em;
@@ -88,36 +101,64 @@ nav div.main-nav-desktop{
 }
 
 .nav-icon{
-	height: 2.4em;
-	width: 2.4em;
-	margin: 0.3em 0.3em 0 0;
-	background-color: red;
+	height: 2.0em;
+	width: 2.3em;
+	margin: -2.8em 0.8em 0 0;
 	float: right;
 	cursor: pointer;
+	background: url('../img/nav.svg'), no-repeat ;
+	background-size: 2.3em 2.3em;
 }
 
 .nav-container-phone{
 	width: 100%;
-	padding-bottom: 1.5em;
 	background-color: rgba(180, 75, 32, 1);
-	overflow: hidden;
+	overflow: scroll;
 	z-index: 10;
 	display: none;
+	position: absolute;
+	z-index: 100;
+	
 }
 
 .nav-container-phone{
+	
+	position: absolute;
+	z-index: 100;
+	
 	nav{
-		width: 44%;
-		margin-left: 6%;
+		width: 50%;
 		float: left;
 		position: relative;
 		display: block;
 		
-		i{
-			margin-top: 0.7em;
+		li{
+			padding-top: 0.7em;
+			padding-bottom: 0.7em;
+			padding-left: 1em;
+			display: block;
 			list-style: none;
-			font-size: 1.3em;
+			font-size: 1.4em;
 			line-height: 100%;
+			
+			a:after{
+				content: ">";
+				margin-left: 0.4em;
+			}
+		}	
+	}
+	nav.utility-bar{
+		
+		li:nth-child(even){
+			background-color: rgba(255,255,255,0.1);
+		}
+
+	}	
+	nav.main-nav ul{
+	
+		
+		li:nth-child(odd){
+			background-color: rgba(255,255,255,0.1);
 		}
 	}
 }
@@ -230,6 +271,8 @@ header-avatars{
 
 }
 .right-column{
+	display: none;
+
 	width: 100%;
 	margin-bottom: 0.3em;
 	color: white;
@@ -382,6 +425,7 @@ header div.header-box{
 
 .inner-branding-burger-container{
 	width: $frame-width;
+	height: 4.1em;
 	min-width: $frame-min-width; 
 	max-width: $frame-max-width; 	
 	@include align-center();
@@ -402,8 +446,12 @@ header div.header-box{
 nav div.main-nav li{
 	display: inline-block;
 	float: right;
+
 }
 
+nav div.main-nav li a:hover{
+	text-decoration: underline;
+}
 
 
 nav div.main-nav-desktop{
@@ -589,6 +637,7 @@ header div.header-box{
 }
 
 .right-column{
+	display: block;
 	float: left;
 	position: relative;
 	width: 24.5%;
