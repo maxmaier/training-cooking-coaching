@@ -957,6 +957,15 @@ ul.lower-utility {
   header div.header-box {
     position: relative; }
 
+  div.inner-header {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size-y: 5em;
+    background-position: right top;
+    height: 0;
+    width: 0;
+    display: inline; }
+
   .main-content {
     position: relative;
     width: 80%;
