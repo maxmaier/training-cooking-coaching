@@ -373,7 +373,8 @@ th {
   clear: both; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #fff; }
 
 body {
   font-family: 'Alegreya Sans', Arial, sans-serif;
@@ -497,16 +498,23 @@ header-avatars {
 
 .main-content h4 {
   font-size: 20px;
+  line-height: 100%;
   font-weight: 400;
   font-style: italic; }
 
 .main-column h4 {
   text-align: center; }
+.main-column a {
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 150%; }
+.main-column .tile:hover a {
+  text-decoration: underline; }
 
 .tile {
   position: relative;
   width: 100%;
-  height: 10em;
+  height: 12em;
   margin-bottom: 0.3em;
   overflow: hidden;
   color: white;
@@ -522,12 +530,19 @@ header-avatars {
   position: relative;
   width: 50%;
   background-color: #cb582a;
-  height: 100%;
+  height: 80%;
   float: left; }
 
 .tile .half-tile h4 {
   margin-left: 5px;
   margin-right: 5px; }
+
+.tile .tile-text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .tile-regular .half-tile:first-child, .tile-reversed .half-tile + .half-tile {
   position: relative;
@@ -717,7 +732,7 @@ ul.lower-utility {
 /* EXTRAS */
 .arrow-right {
   position: relative;
-  top: 5em;
+  top: 6em;
   margin-top: -30px;
   width: 0;
   height: 0;
@@ -727,7 +742,7 @@ ul.lower-utility {
 
 .arrow-left {
   position: relative;
-  top: 5em;
+  top: 6em;
   margin-top: -30px;
   width: 0;
   height: 0;
@@ -1018,7 +1033,7 @@ ul.lower-utility {
     background-size: 140%; }
 
   .tile-offer {
-    height: 9em;
+    height: 11em;
     width: 45.75%;
     padding: 0.5em 2% 0.5em 2%; }
 
