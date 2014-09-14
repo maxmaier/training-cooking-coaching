@@ -1,0 +1,181 @@
+body{
+	position: absolute;
+	width: 100%;
+	top:0px;
+}
+
+/*
+	HEADER & NAV
+*/
+
+div.inner-header{
+	display: block;
+	width: 100%;	
+	height: 14em;
+}
+div.header-box{
+	position: relative;
+	width: 100%;
+	min-height: 14em;
+	overflow: visible;
+}
+div.header-box{
+	.logo-home, .logo-home img{
+		width: 12em;
+		margin-top: 2px;
+		margin-left: 10px;
+	}
+	a.logo-link{
+		display: inline-block; 
+		position: relative;
+	}
+	a.logo-link:after{
+		content: ""; 
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left:0;
+	}
+}
+.utility-bar-desktop{
+	display: none;
+}
+.branding-burger-container{
+	height: 3em;
+}
+.header-logo{
+	display: block;
+	width: 4em;
+	height: 2.4em;
+	margin: 0.3em 0 0 0.3em;
+	float: left;
+}
+.nav-icon{
+	height: 2.0em;
+	width: 2.3em;
+	margin: -2.8em 0.8em 0 0;
+	float: right;
+}
+.nav-container-phone{
+	display: none;
+	position: absolute;	
+	width: 100%;
+	overflow: scroll;
+	z-index: 100;
+	nav{
+		width: 50%;
+		float: left;
+		position: relative;
+		display: block;
+		li{
+			padding-top: 0.7em;
+			padding-bottom: 0.7em;
+			padding-left: 1em;
+			display: block;
+			a:after{
+				margin-left: 0.4em;
+			}	
+		}
+	}
+}
+.header-topics{
+	display: none;
+}
+.header-avatars{
+	display: none;
+}
+
+/* 
+	BODY
+*/
+
+.tile{
+	position: relative;
+	width: 100%;
+	height: 12em;
+	margin-bottom: 0.3em;
+	overflow: hidden;
+}
+.tiles-box{
+	width: 100%;
+}
+.tile .half-tile{
+	position: relative;
+	width: 50%;
+	background-color: rgba(203, 88, 42, 1);
+	height: 80%;
+	float: left;
+}
+.tile .half-tile h4{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.tile .tile-text{
+	@include vertical-align;
+}
+.tile-regular .half-tile:first-child, .tile-reversed .half-tile+.half-tile{
+	position: relative;
+	width: 46%;
+	height: 96%;
+	padding: 2%;
+}
+.tile img.picto{
+	width: 30%;
+}
+.tile-offer{
+	height: 90%;
+	width: 90%;
+	padding: 5% 5% 5% 5%;
+	h4{
+		margin-bottom: 5px;
+	}
+	a{
+		display: block;	
+		width: 100%;
+	}
+
+}
+.right-column{
+	display: none;
+	width: 100%;
+	margin-bottom: 0.3em;	
+	
+	.visitenkarte{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.visitenkarte+p{
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 20px;
+	}
+}
+footer{
+	margin-top: 60px;
+}
+.upper-footer{
+	clear: both;
+}
+.lower-footer{
+	width: 100%;
+	@include align-center();
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+	
+	li{
+		display: inline-block;
+		margin-right: 1.5em;
+	}
+}
+
+ul.lower-utility{ 
+	margin-top: 1em;
+}
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+header div.header-box{
+	min-height: 530px;
+	overflow: hidden;
+}

@@ -1,0 +1,44 @@
+/*
+	This Sass file is for styles that apply to the HTML in general.
+*/
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+body{
+	font-family: 'Alegreya Sans', Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* EXTRAS */
+
+.arrow-right {
+	position: relative;
+	top: 6em;
+	margin-top: -30px;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-left: 30px solid $outer-gradient-colour;
+}
+.arrow-left {
+	position: relative;
+	top: 6em;
+	margin-top: -30px;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-right: 30px solid $outer-gradient-colour;
+	float: right;
+}
