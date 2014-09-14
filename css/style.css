@@ -393,6 +393,18 @@ body {
   font-weight: normal;
   font-style: normal; }
 
+.link-expander {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* edit: added z-index */
+  z-index: 1;
+  /* edit: fixes overlap error in IE7/8, 
+   make sure you have an empty gif */
+  background-image: url("empty.gif"); }
+
 /* EXTRAS */
 .arrow-right {
   position: relative;
@@ -500,7 +512,13 @@ nav div.main-nav-desktop {
 @media only screen and (min-width: 680px) {
   header div.header-box {
     min-height: 530px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
+
+  div.inner-header {
+    height: 0;
+    width: 0;
+    display: inline; }
 
   .utility-bar-desktop {
     position: relative;
@@ -528,14 +546,6 @@ nav div.main-nav-desktop {
           *display: inline;
           margin-left: 1.5em; }
 
-  header div.header-box {
-    position: relative; }
-
-  div.inner-header {
-    height: 0;
-    width: 0;
-    display: inline; }
-
   .branding-burger-container {
     position: relative;
     height: 4.1em; }
@@ -562,17 +572,19 @@ nav div.main-nav-desktop {
     float: right; }
 
   nav div.main-nav-desktop {
+    position: relative;
     display: block;
     width: 80%;
     min-width: 900px;
     max-width: 1200px;
-    float: right; }
+    height: 20px; }
     nav div.main-nav-desktop ul {
-      margin-top: -2.7em; }
+      margin-top: -2.7em;
+      float: right; }
       nav div.main-nav-desktop ul li {
         display: inline;
         display: inline-block;
-        float: right;
+        float: left;
         margin-left: 1em; }
 
   .nav-icon {
@@ -598,8 +610,9 @@ nav div.main-nav-desktop {
   position: relative;
   width: 50%;
   background-color: #cb582a;
-  height: 80%;
-  float: left; }
+  height: 100%;
+  float: left;
+  overflow: hidden; }
 
 .tile .half-tile h4 {
   margin-left: 5px;
@@ -630,6 +643,10 @@ nav div.main-nav-desktop {
   .tile-offer a {
     display: block;
     width: 100%; }
+
+.half-tile-bg {
+  height: 100%;
+  width: 100%; }
 
 /* Desktop-styles for the main column on home */
 @media only screen and (min-width: 680px) {
@@ -700,7 +717,12 @@ footer {
   margin-top: 60px; }
 
 .upper-footer {
-  clear: both; }
+  clear: both;
+  padding: 5%; }
+  .upper-footer .upper-footer-column {
+    margin-top: 1em; }
+  .upper-footer .upper-footer-column:first-child {
+    margin-top: 0em; }
 
 .lower-footer {
   width: 100%;
@@ -719,30 +741,31 @@ ul.lower-utility {
 @media only screen and (min-width: 680px) {
   footer .upper-footer {
     padding-top: 15px; }
-  footer .upper-footer-inner {
-    height: 8em;
-    width: 80%;
-    min-width: 900px;
-    max-width: 1200px;
-    margin-top: 15px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-left: auto;
-    margin-right: auto; }
-  footer .upper-footer-column {
-    float: left;
-    margin-right: 3%; }
-  footer .upper-footer-column-1 {
-    width: 20%; }
-  footer .upper-footer-column-2 {
-    width: 22%; }
-  footer .upper-footer-column-3 {
-    width: 15%; }
-  footer .upper-footer-column-4 {
-    width: 27%; }
-  footer img.logo-home {
-    margin-top: 5px;
-    width: 98%; } }
+    footer .upper-footer .upper-footer-inner {
+      height: 8em;
+      width: 80%;
+      min-width: 900px;
+      max-width: 1200px;
+      margin-top: 15px;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-left: auto;
+      margin-right: auto; }
+    footer .upper-footer .upper-footer-column {
+      float: left;
+      margin-right: 3%;
+      margin-top: 0; }
+    footer .upper-footer .upper-footer-column-1 {
+      width: 20%; }
+    footer .upper-footer .upper-footer-column-2 {
+      width: 22%; }
+    footer .upper-footer .upper-footer-column-3 {
+      width: 15%; }
+    footer .upper-footer .upper-footer-column-4 {
+      width: 27%; }
+    footer .upper-footer img.logo-home {
+      margin-top: 5px;
+      width: 98%; } }
 /* End of footer */
 /*
 	This Sass file is for visuals aspects.
@@ -760,9 +783,8 @@ div.inner-header {
   background-position: right top; }
 
 div.header-box {
-  background: url("../img/header_bg_2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background: url("../img/header_bg_4.png");
+  background-size: cover;
   color: white; }
 
 .branding-burger-container {
@@ -860,29 +882,29 @@ div.header-box {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#df8b40', endColorstr='#b86223',GradientType=1 );
   /* IE6-8 fallback on horizontal gradient */ }
 
-.tile-regular .half-tile + .half-tile, .tile-reversed .half-tile:first-child {
+.tile-regular .half-tile + .half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg {
   background: url("../img/coach.jpg") no-repeat;
   background-size: cover; }
 
-.tile-training .half-tile + .half-tile {
+.tile-training .half-tile + .half-tile .half-tile-bg {
   background-image: url("../img/training.jpg"); }
 
-.tile-resilienz .half-tile + .half-tile {
+.tile-resilienz .half-tile + .half-tile .half-tile-bg {
   background-image: url("../img/resilienz.jpg"); }
 
-.tile-museum .half-tile + .half-tile {
+.tile-museum .half-tile + .half-tile .half-tile-bg {
   background-image: url("../img/museum.jpg"); }
 
-.tile-cooking .half-tile:first-child {
+.tile-cooking .half-tile:first-child .half-tile-bg {
   background-image: url("../img/cooking.jpg"); }
 
-.tile-coaching .half-tile:first-child {
+.tile-coaching .half-tile:first-child .half-tile-bg {
   background-image: url("../img/coaching.jpg"); }
 
-.tile-humor .half-tile:first-child {
+.tile-humor .half-tile:first-child .half-tile-bg {
   background-image: url("../img/humor.jpg"); }
 
-.tile-politik .half-tile:first-child {
+.tile-politik .half-tile:first-child .half-tile-bg {
   background-image: url("../img/politik.jpg"); }
 
 .tile-offer {
@@ -910,17 +932,26 @@ div.header-box {
     color: #2c2718; }
 
 @media only screen and (min-width: 680px) {
-  .tile-regular .half-tile + .half-tile, .tile-reversed .half-tile:first-child {
-    background-size: 130%;
-    background-position: center;
+  .tile-regular .half-tile + .half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg {
+    /*background-size: 130%;
+    background-position:center;
     transition: background-size 4s ease;
     -moz-transition: background-size 4s ease;
     -ms-transition: background-size 4s ease;
     -o-transition: background-size 4s ease;
-    -webkit-transition: background-size 4s ease; }
+    -webkit-transition: background-size 4s ease;
+    */
+    webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    transition: 5s ease;
+    -moz-transition: 5s ease;
+    -ms-transition: 5s ease;
+    -o-transition: 5s ease;
+    -webkit-transition: 5s ease; }
 
-  .tile-regular:hover .half-tile + .half-tile, .tile-reversed:hover .half-tile:first-child {
-    background-size: 140%; } }
+  .tile-regular:hover .half-tile + .half-tile .half-tile-bg, .tile-reversed:hover .half-tile:first-child .half-tile-bg {
+    webkit-transform: scale(1.15, 1.15);
+    transform: scale(1.15, 1.15); } }
 /*===============================
 	Right column -- Visuals
 ===============================*/
@@ -1122,6 +1153,7 @@ footer {
       .header-interactions .header-avatars div {
         float: right; }
         .header-interactions .header-avatars div .header-avatar {
+          position: relative;
           height: 450px;
           width: 350px;
           float: left;
@@ -1135,11 +1167,12 @@ footer {
         .header-interactions .header-avatars div .ha-training-2 {
           background-position: 0px 0px; }
         .header-interactions .header-avatars div .ha-cooking {
-          background-image: url("../img/ha_cooking.png"); }
+          background-image: url("../img/ha_cooking_2.png");
+          z-index: -1; }
         .header-interactions .header-avatars div .ha-cooking-1 {
-          background-position: 0px -450px; }
+          background-position: 25px -460px; }
         .header-interactions .header-avatars div .ha-cooking-2 {
-          background-position: 0px 0px; }
+          background-position: 25px -20px; }
         .header-interactions .header-avatars div .ha-coaching {
           background-image: url("../img/ha_coaching.png"); }
         .header-interactions .header-avatars div .ha-coaching-1 {

@@ -17,9 +17,10 @@ div.inner-header{
 	background-position: right top;
 }
 div.header-box{
-	background: url('../img/header_bg_2.jpg');
-	background-repeat: no-repeat;
-	background-size: 100%;
+	background: url('../img/header_bg_4.png');
+	//background: url('../img/brick_alt2.jpg');
+	background-size: cover;
+
 	color: white;
 }
 .branding-burger-container{
@@ -120,34 +121,31 @@ nav div.main-nav-desktop{
 	text-align: center;
 	@include bg-gradient-orange();
 }
-.tile-regular .half-tile+.half-tile, .tile-reversed .half-tile:first-child{
+.tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child {
+}
+.tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg{
 	background: url('../img/coach.jpg') no-repeat;
 	background-size: cover;
 }
-
-.tile-training .half-tile+.half-tile {
+.tile-training .half-tile+.half-tile .half-tile-bg{
 	background-image: url('../img/training.jpg');
 }
-
-.tile-resilienz .half-tile+.half-tile {
+.tile-resilienz .half-tile+.half-tile .half-tile-bg{
 	background-image: url('../img/resilienz.jpg');
 }
-
-.tile-museum .half-tile+.half-tile {
+.tile-museum .half-tile+.half-tile .half-tile-bg{
 	background-image: url('../img/museum.jpg');
 }
-
-.tile-cooking .half-tile:first-child {
+.tile-cooking .half-tile:first-child .half-tile-bg{
 	background-image: url('../img/cooking.jpg');
 }
-.tile-coaching .half-tile:first-child {
+.tile-coaching .half-tile:first-child .half-tile-bg{
 	background-image: url('../img/coaching.jpg');
 }
-
-.tile-humor .half-tile:first-child {
+.tile-humor .half-tile:first-child .half-tile-bg{
 	background-image: url('../img/humor.jpg');
 }
-.tile-politik .half-tile:first-child {
+.tile-politik .half-tile:first-child .half-tile-bg{
 	background-image: url('../img/politik.jpg');
 }
 .tile-offer{
@@ -161,18 +159,31 @@ nav div.main-nav-desktop{
 
 @media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
 
-.tile-regular .half-tile+.half-tile, .tile-reversed .half-tile:first-child{
-	background-size: 130%;
+.tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg{
+	/*background-size: 130%;
 	background-position:center;
-
 	transition: background-size 4s ease;
 	-moz-transition: background-size 4s ease;
 	-ms-transition: background-size 4s ease;
 	-o-transition: background-size 4s ease;
 	-webkit-transition: background-size 4s ease;
+	*/
+
+	webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+
+	transition:  5s ease;
+	-moz-transition:  5s ease;
+	-ms-transition:  5s ease;
+	-o-transition:  5s ease;
+	-webkit-transition:  5s ease;
+
+	
 }
-.tile-regular:hover .half-tile+.half-tile, .tile-reversed:hover .half-tile:first-child{
-	background-size: 140%;
+.tile-regular:hover .half-tile+.half-tile .half-tile-bg, .tile-reversed:hover .half-tile:first-child .half-tile-bg{
+	//background-size: 140%;
+	webkit-transform: scale(1.15, 1.15);
+    transform: scale(1.15, 1.15);
 }
 }
 

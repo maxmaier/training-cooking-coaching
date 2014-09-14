@@ -96,6 +96,12 @@ nav div.main-nav-desktop{
 header div.header-box{
 	min-height: 530px;
 	overflow: hidden;
+	position: relative;
+}
+div.inner-header{
+		height: 0;
+		width: 0;
+		display: inline;
 }
 .utility-bar-desktop{
 	position: relative;
@@ -128,14 +134,7 @@ header div.header-box{
 		}
 	}
 }
-header div.header-box{
-	position: relative;
-}
-div.inner-header{
-		height: 0;
-		width: 0;
-		display: inline;
-}
+
 
 .branding-burger-container{
 	position: relative;
@@ -166,19 +165,22 @@ nav div.main-nav li{
 }
 
 nav div.main-nav-desktop{
+	position:relative;
 	display: block;
 	width: $frame-width;
 	min-width: $frame-min-width; 
 	max-width: $frame-max-width;
-	float: right;
+	height: 20px;
 
 	ul{
 		margin-top: -2.7em;
+		float: right;
+
 	
 		li{
 			display: inline;
 			display: inline-block;
-			float: right;
+			float: left;
 			margin-left: 1em;
 		}
 	}
@@ -212,8 +214,10 @@ nav div.main-nav-desktop{
 	position: relative;
 	width: 50%;
 	background-color: rgba(203, 88, 42, 1);
-	height: 80%;
+	height: 100%;
 	float: left;
+	overflow: hidden;
+
 }
 .tile .half-tile h4{
 	margin-left: 5px;
@@ -243,6 +247,10 @@ nav div.main-nav-desktop{
 		width: 100%;
 	}
 
+}
+.half-tile-bg{
+	height: 100%;
+	width: 100%;
 }
 
 /* Desktop-styles for the main column on home */
@@ -340,6 +348,14 @@ footer{
 }
 .upper-footer{
 	clear: both;
+	padding: 5%;
+	
+	.upper-footer-column{
+		margin-top: 1em;
+	}
+	.upper-footer-column:first-child{
+		margin-top: 0em;
+	}
 }
 .lower-footer{
 	width: 100%;
@@ -365,37 +381,39 @@ footer{
 	.upper-footer{
 		padding-top: 15px;
 	
-	}
-	.upper-footer-inner{
-		height: 8em;
-		width: $frame-width;
-		min-width: $frame-min-width; 
-		max-width: $frame-max-width; 
-		margin-top: 15px;
-		margin-left: $frame-margin;
-		margin-right: $frame-margin;
-		@include align-center();
-	}
-.upper-footer-column{
-		float: left;
-		margin-right: 3%;
-	}
-	.upper-footer-column-1{
-		width: 20%;
-	}
-	.upper-footer-column-2{
-		width: 22%;
-	}
-	.upper-footer-column-3{
-		width: 15%;
-	}
-	.upper-footer-column-4{
-		width: 27%;
-	}
 	
-	img.logo-home{
-		margin-top: 5px;
-		width: 98%;
+		.upper-footer-inner{
+			height: 8em;
+			width: $frame-width;
+			min-width: $frame-min-width; 
+			max-width: $frame-max-width; 
+			margin-top: 15px;
+			margin-left: $frame-margin;
+			margin-right: $frame-margin;
+			@include align-center();
+		}
+	.upper-footer-column{
+			float: left;
+			margin-right: 3%;
+			margin-top: 0;
+		}
+		.upper-footer-column-1{
+			width: 20%;
+		}
+		.upper-footer-column-2{
+			width: 22%;
+		}
+		.upper-footer-column-3{
+			width: 15%;
+		}
+		.upper-footer-column-4{
+			width: 27%;
+		}
+		
+		img.logo-home{
+			margin-top: 5px;
+			width: 98%;
+		}
 	}
 }
 }

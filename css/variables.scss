@@ -57,7 +57,6 @@ $frame-margin: (100% - $frame-width) / 2;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf7ef', endColorstr='#bfbbb5',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 
-
 @mixin box-shadow($param){
 	-webkit-box-shadow: $param;
 	-moz-box-shadow: $param;

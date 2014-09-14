@@ -90,6 +90,7 @@
 			float: right;
 		
 			.header-avatar{
+				position: relative;
 				height: 450px;	
 				width: 350px;
 				float: left;
@@ -107,13 +108,14 @@
 				background-position: 0px 0px;		
 			}
 			.ha-cooking{
-				background-image: url('../img/ha_cooking.png');
+				background-image: url('../img/ha_cooking_2.png');
+				z-index: -1;
 			}
 			.ha-cooking-1{
-				background-position: 0px -450px;
+				background-position: 25px -460px;
 			}
 			.ha-cooking-2{
-				background-position: 0px 0px;		
+				background-position: 25px -20px;		
 			}
 			.ha-coaching{
 				background-image: url('../img/ha_coaching.png');	
