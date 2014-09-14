@@ -6,9 +6,9 @@ body{
 	background-color: #f8f3ea;
 }
 
-/*
-	HEADER & NAV
-*/
+/*===============================
+	Header & Nav -- Visuals
+===============================*/
 
 div.inner-header{
 	background-image: url("../img/header_ava_mobile.png");
@@ -23,12 +23,8 @@ div.header-box{
 	color: white;
 }
 .branding-burger-container{
-	height: 3em;
 	background-color: rgba(203, 88, 42, 1);
 	@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));	
-}
-nav div.main-nav-desktop{
-	display: none;
 }
 .nav-icon{
 	background: url('../img/nav.svg'), no-repeat ;
@@ -55,9 +51,41 @@ nav div.main-nav-desktop{
 	}
 }
 
-/* 
-	BODY
-*/
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+div.inner-header{
+		background-image: none;
+		background-repeat: no-repeat;
+		background-size-y: 5em;
+		background-position: right top;
+	}
+.utility-bar-desktop{
+	background-color: rgba(51, 51, 51, 0.8);
+	
+	div	ul li{
+		font-size: 0.9em;
+	}		
+	
+}
+.branding-burger-container{
+	background-color: rgba(203, 88, 42, 0.7);
+}
+nav div.main-nav li a:hover{
+	text-decoration: underline;
+}
+nav div.main-nav-desktop{
+	font-weight: 400;
+	font-style: italic;
+	
+	ul li{
+			font-size: 1.1em;
+	}
+}
+}
+
+/*===============================
+	Main colums -- Visuals
+===============================*/
 
 .main-content{	
 	h4{
@@ -130,6 +158,28 @@ nav div.main-nav-desktop{
 		color: #2c2718;
 	}
 }
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+.tile-regular .half-tile+.half-tile, .tile-reversed .half-tile:first-child{
+	background-size: 130%;
+	background-position:center;
+
+	transition: background-size 4s ease;
+	-moz-transition: background-size 4s ease;
+	-ms-transition: background-size 4s ease;
+	-o-transition: background-size 4s ease;
+	-webkit-transition: background-size 4s ease;
+}
+.tile-regular:hover .half-tile+.half-tile, .tile-reversed:hover .half-tile:first-child{
+	background-size: 140%;
+}
+}
+
+/*===============================
+	Right column -- Visuals
+===============================*/
+
 .right-column{
 	color: white;
 	@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));
@@ -154,6 +204,22 @@ nav div.main-nav-desktop{
 		font-size: 90%;
 	}
 }
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+.right-column{
+	.visitenkarte{
+		background-color: #89603b;
+	
+	}
+}
+}
+
+
+/*===============================
+	Footer -- Visuals
+===============================*/
+
 footer{
 	color: #fff;
 }
@@ -174,3 +240,16 @@ footer{
 }
 
 @media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+footer{
+	line-height: 150%;
+
+	a{
+		color: #fff;
+	}	
+	address{
+		font-style: normal;
+	}
+}
+}
+

@@ -4,9 +4,9 @@ body{
 	top:0px;
 }
 
-/*
-	HEADER & NAV
-*/
+/*===============================
+	Header & Nav -- Structure
+===============================*/
 
 div.inner-header{
 	display: block;
@@ -79,6 +79,9 @@ div.header-box{
 		}
 	}
 }
+nav div.main-nav-desktop{
+	display: none;
+}
 .header-topics{
 	display: none;
 }
@@ -86,9 +89,114 @@ div.header-box{
 	display: none;
 }
 
-/* 
-	BODY
-*/
+/* Desktop-styles for the header */
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+header div.header-box{
+	min-height: 530px;
+	overflow: hidden;
+}
+.utility-bar-desktop{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 5px;
+	
+	div{
+		width: $frame-width;
+		min-width: $frame-min-width; 
+		max-width: $frame-max-width;
+		@include align-center();
+
+		ul{
+			float: right;
+			position: relative;
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-bottom: 7px;
+	
+			li{
+				display: -moz-inline-stack;
+				display: inline-block;
+				zoom: 1;
+				*display: inline;
+				margin-left: 1.5em;
+			}		
+		}
+	}
+}
+header div.header-box{
+	position: relative;
+}
+div.inner-header{
+		height: 0;
+		width: 0;
+		display: inline;
+}
+
+.branding-burger-container{
+	position: relative;
+	height: 4.1em;
+}
+.inner-branding-burger-container{
+	width: $frame-width;
+	height: 4.1em;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width; 	
+	@include align-center();
+	
+	img.logo-home{
+		margin-top: 5px;
+		margin-left: 0px;
+		width: 15em;
+		position: absolute;	
+	}
+	.logo-link{
+		display: block;
+		width: 15em;
+		height: 3.8em;
+	}
+}
+nav div.main-nav li{
+	display: inline-block;
+	float: right;
+}
+
+nav div.main-nav-desktop{
+	display: block;
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width;
+	float: right;
+
+	ul{
+		margin-top: -2.7em;
+	
+		li{
+			display: inline;
+			display: inline-block;
+			float: right;
+			margin-left: 1em;
+		}
+	}
+}
+.nav-icon{
+	display: none;
+}
+.nav-container-phone{
+	display: none;
+}
+
+}
+
+/* End of header */
+
+/*==============================
+	Main Column -- Structure
+==============================*/
 
 .tile{
 	position: relative;
@@ -136,6 +244,49 @@ div.header-box{
 	}
 
 }
+
+/* Desktop-styles for the main column on home */
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+.main-content{
+	position: relative;
+	width: $frame-width;
+	min-width: $frame-min-width; 
+	max-width: $frame-max-width; 
+	margin-top: -100px;
+	overflow: hidden;
+	@include align-center();
+
+}
+.main-column{
+	position: relative;
+	width: 75%;
+	margin-right: 0.5%;
+	float: left;
+}
+.tile{
+	float: left;
+	width: 49.75%;
+}
+.tile:nth-child(odd){
+	margin-right: 0.5%;
+}
+.tile-offer{
+	height: 11em;
+	width: 45.75%;
+	padding: 0.5em 2% 0.5em 2%;
+	
+}
+}
+
+/* End of main column (home) */
+
+
+/*=============================
+	Right Column-- Structure
+=============================*/
+
 .right-column{
 	display: none;
 	width: 100%;
@@ -151,6 +302,39 @@ div.header-box{
 		margin-bottom: 20px;
 	}
 }
+
+/* Desktop-styles for the right column */
+
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+
+.right-column{
+	display: block;
+	float: left;
+	position: relative;
+	width: 24.5%;
+	padding-top: 10px;
+	
+	.visitenkarte{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		img{
+			float: left;
+			margin-right: 20px;
+		}	
+	}
+}
+}
+
+/* End of right column */
+
+
+/*========================
+	Footer -- Structure
+========================*/
+
 footer{
 	margin-top: 60px;
 }
@@ -173,9 +357,48 @@ ul.lower-utility{
 	margin-top: 1em;
 }
 
-@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+/* Desktop-styles for the footer */
 
-header div.header-box{
-	min-height: 530px;
-	overflow: hidden;
+@media only screen and (min-width: 680px) { //responsive for bigger-than-smartphone screens
+	
+footer{	
+	.upper-footer{
+		padding-top: 15px;
+	
+	}
+	.upper-footer-inner{
+		height: 8em;
+		width: $frame-width;
+		min-width: $frame-min-width; 
+		max-width: $frame-max-width; 
+		margin-top: 15px;
+		margin-left: $frame-margin;
+		margin-right: $frame-margin;
+		@include align-center();
+	}
+.upper-footer-column{
+		float: left;
+		margin-right: 3%;
+	}
+	.upper-footer-column-1{
+		width: 20%;
+	}
+	.upper-footer-column-2{
+		width: 22%;
+	}
+	.upper-footer-column-3{
+		width: 15%;
+	}
+	.upper-footer-column-4{
+		width: 27%;
+	}
+	
+	img.logo-home{
+		margin-top: 5px;
+		width: 98%;
+	}
 }
+}
+
+/* End of footer */
+
