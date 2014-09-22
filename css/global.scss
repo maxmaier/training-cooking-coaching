@@ -39,8 +39,9 @@ body{
 /* EXTRAS */
 
 .arrow-right {
+	z-index: 10px;
 	position: relative;
-	top: 6em;
+	top: -6em;
 	margin-top: -30px;
 	width: 0; 
 	height: 0; 
@@ -49,8 +50,9 @@ body{
 	border-left: 30px solid $outer-gradient-colour;
 }
 .arrow-left {
+	z-index: 10px;
 	position: relative;
-	top: 6em;
+	top: -6em;
 	margin-top: -30px;
 	width: 0; 
 	height: 0; 

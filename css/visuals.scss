@@ -121,8 +121,6 @@ nav div.main-nav-desktop{
 	text-align: center;
 	@include bg-gradient-orange();
 }
-.tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child {
-}
 .tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg{
 	background: url('../img/coach.jpg') no-repeat;
 	background-size: cover;
@@ -197,6 +195,9 @@ nav div.main-nav-desktop{
 	@include bg-gradient-orange();
 	
 	h3{
+		display: block;
+		padding-left: 5%;
+		padding-right: 5%;
 		text-align: center;
 		font-size: 23px;
 		font-weight: 400;

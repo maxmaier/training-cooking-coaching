@@ -130,7 +130,6 @@ function hideResponsiveNav(){
 };
 
 
-
 $( document ).ready(function() {
 
 	$('.nav-icon').on('click', function(){
