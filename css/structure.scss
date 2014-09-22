@@ -200,6 +200,16 @@ nav div.main-nav-desktop{
 	Main Column -- Structure
 ==============================*/
 
+.page-box{
+	width: 100%;
+	min-height: 50em;
+	overflow: hidden;
+    position: relative;
+}
+.inner-page-box{
+	height: 100%;
+	position: absolute;
+}
 .tile{
 	position: relative;
 	width: 100%;

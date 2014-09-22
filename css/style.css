@@ -598,6 +598,16 @@ nav div.main-nav-desktop {
 /*==============================
 	Main Column -- Structure
 ==============================*/
+.page-box {
+  width: 100%;
+  min-height: 50em;
+  overflow: hidden;
+  position: relative; }
+
+.inner-page-box {
+  height: 100%;
+  position: absolute; }
+
 .tile {
   position: relative;
   width: 100%;
@@ -833,7 +843,8 @@ div.header-box {
 
   nav div.main-nav-desktop {
     font-weight: 400;
-    font-style: italic; }
+    font-style: italic;
+    width: 100%; }
     nav div.main-nav-desktop ul li {
       font-size: 1.1em; } }
 /*===============================
@@ -853,6 +864,15 @@ div.header-box {
   line-height: 150%; }
 .main-column .tile:hover a {
   text-decoration: underline; }
+
+.page-box {
+  background-color: #fcf7f0;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34);
+  box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34); }
 
 .tile {
   color: white;
@@ -1024,22 +1044,7 @@ footer {
 .lower-footer {
   width: 100%;
   text-align: center;
-  background: #5c4f40;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #5c4f40 0%, #827568 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5c4f40), color-stop(100%, #827568));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #5c4f40 0%, #827568 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #5c4f40 0%, #827568 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #5c4f40 0%, #827568 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #5c4f40 0%, #827568 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c4f40', endColorstr='#827568',GradientType=0 );
-  /* IE6-9 */ }
+  background-color: #493f34; }
   .lower-footer li {
     line-height: 150%; }
   .lower-footer li:hover {

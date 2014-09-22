@@ -77,7 +77,7 @@ nav div.main-nav li a:hover{
 nav div.main-nav-desktop{
 	font-weight: 400;
 	font-style: italic;
-	
+	width: 100%;
 	ul li{
 			font-size: 1.1em;
 	}
@@ -108,6 +108,16 @@ nav div.main-nav-desktop{
 	.tile:hover a{
 		text-decoration: underline;
 	}
+}
+.page-box{
+	background-color: #fcf7f0;
+	@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));
+	-webkit-box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
+	-moz-box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
+	box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
+}
+.inner-page-box{
+	
 }
 .tile{
 	color: white;
@@ -241,7 +251,8 @@ footer{
 .lower-footer{
 	width: 100%;
 	text-align: center;
-	@include bg-gradient-footer();
+	background-color: #493f34;
+	//@include bg-gradient-footer();
 	
 	li{
 		line-height: 150%;
