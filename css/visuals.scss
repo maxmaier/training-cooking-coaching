@@ -16,12 +16,22 @@ div.inner-header{
 	background-size-y: 5em;
 	background-position: right top;
 }
+body.page-body div.inner-header{
+	background: none;
+}
 div.header-box{
 	background: url('../img/header_bg_4.png');
 	//background: url('../img/brick_alt2.jpg');
 	background-size: cover;
 
 	color: white;
+}
+body.page-body header div.header-box{
+	background-color: #000;
+	background-image: url('../img/header-museum.png');
+	background-position: center center;
+	background-repeat: no-repeat;	
+	background-size: cover;
 }
 .branding-burger-container{
 	background-color: rgba(203, 88, 42, 1);
@@ -115,6 +125,48 @@ nav div.main-nav-desktop{
 	-webkit-box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
 	-moz-box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
 	box-shadow: inset 0px 0px 50px 16px rgba(0,0,0,0.34);
+	
+	h2, p.fazit{
+		color: $prime-colour;
+		font-style: italic;
+	}
+	h2{
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	h2:first-child{
+		margin-top: 0px;
+	}
+	p{
+		margin-top: 0.7em;
+	}
+	h3+p{
+		margin-top: 1em;
+	}
+	ul{
+		list-style: none;
+	
+		li{
+			margin-top: 0.7em;
+			list-style-position: inside;
+		}
+		li:before{
+			content: "";
+			display: block;
+			width: 14px;
+			height: 13px;
+			background-image: url('../img/costum_bullet.png');
+			float: left;
+			margin-top: 5px;
+			margin-right: 5px;
+		}
+	}
+	
+	.img-float-right{
+		float: right;
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
 }
 .inner-page-box{
 	

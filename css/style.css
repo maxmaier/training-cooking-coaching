@@ -517,6 +517,9 @@ nav div.main-nav-desktop {
     overflow: hidden;
     position: relative; }
 
+  body.page-body header div.header-box {
+    min-height: 400px; }
+
   div.inner-header {
     height: 0;
     width: 0;
@@ -599,7 +602,8 @@ nav div.main-nav-desktop {
 	Main Column -- Structure
 ==============================*/
 .page-box {
-  width: 100%;
+  width: 90%;
+  padding: 5%;
   min-height: 50em;
   overflow: hidden;
   position: relative; }
@@ -794,10 +798,20 @@ div.inner-header {
   background-size-y: 5em;
   background-position: right top; }
 
+body.page-body div.inner-header {
+  background: none; }
+
 div.header-box {
   background: url("../img/header_bg_4.png");
   background-size: cover;
   color: white; }
+
+body.page-body header div.header-box {
+  background-color: #000;
+  background-image: url("../img/header-museum.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .branding-burger-container {
   background-color: #cb582a;
@@ -873,6 +887,36 @@ div.header-box {
   -webkit-box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34);
   -moz-box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34);
   box-shadow: inset 0px 0px 50px 16px rgba(0, 0, 0, 0.34); }
+  .page-box h2, .page-box p.fazit {
+    color: #e56b1f;
+    font-style: italic; }
+  .page-box h2 {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  .page-box h2:first-child {
+    margin-top: 0px; }
+  .page-box p {
+    margin-top: 0.7em; }
+  .page-box h3 + p {
+    margin-top: 1em; }
+  .page-box ul {
+    list-style: none; }
+    .page-box ul li {
+      margin-top: 0.7em;
+      list-style-position: inside; }
+    .page-box ul li:before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 13px;
+      background-image: url("../img/costum_bullet.png");
+      float: left;
+      margin-top: 5px;
+      margin-right: 5px; }
+  .page-box .img-float-right {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em; }
 
 .tile {
   color: white;

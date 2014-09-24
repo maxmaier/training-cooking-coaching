@@ -98,10 +98,13 @@ header div.header-box{
 	overflow: hidden;
 	position: relative;
 }
+body.page-body header div.header-box{
+	min-height: 400px;
+}
 div.inner-header{
-		height: 0;
-		width: 0;
-		display: inline;
+	height: 0;
+	width: 0;
+	display: inline;
 }
 .utility-bar-desktop{
 	position: relative;
@@ -175,7 +178,6 @@ nav div.main-nav-desktop{
 	ul{
 		margin-top: -2.7em;
 		float: right;
-
 	
 		li{
 			display: inline;
@@ -201,7 +203,8 @@ nav div.main-nav-desktop{
 ==============================*/
 
 .page-box{
-	width: 100%;
+	width: 90%;
+	padding: 5%;
 	min-height: 50em;
 	overflow: hidden;
     position: relative;
