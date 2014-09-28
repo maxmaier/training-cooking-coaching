@@ -184,29 +184,29 @@ nav div.main-nav-desktop{
 	@include bg-gradient-orange();
 }
 .tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg{
-	background: url('../img/coach.jpg') no-repeat;
+	background: url('../img/home_coach.jpg') no-repeat;
 	background-size: cover;
 }
 .tile-training .half-tile+.half-tile .half-tile-bg{
-	background-image: url('../img/training.jpg');
+	background-image: url('../img/home_training.jpg');
 }
 .tile-resilienz .half-tile+.half-tile .half-tile-bg{
-	background-image: url('../img/resilienz.jpg');
+	background-image: url('../img/home_resilienz.jpg');
 }
 .tile-museum .half-tile+.half-tile .half-tile-bg{
-	background-image: url('../img/museum.jpg');
+	background-image: url('../img/home_museum.jpg');
 }
 .tile-cooking .half-tile:first-child .half-tile-bg{
-	background-image: url('../img/cooking.jpg');
+	background-image: url('../img/home_cooking.jpg');
 }
 .tile-coaching .half-tile:first-child .half-tile-bg{
-	background-image: url('../img/coaching.jpg');
+	background-image: url('../img/home_coaching.jpg');
 }
 .tile-humor .half-tile:first-child .half-tile-bg{
-	background-image: url('../img/humor.jpg');
+	background-image: url('../img/home_humor.jpg');
 }
 .tile-politik .half-tile:first-child .half-tile-bg{
-	background-image: url('../img/politik.jpg');
+	background-image: url('../img/home_politik.jpg');
 }
 .tile-offer{
 	color: #2c2718;
