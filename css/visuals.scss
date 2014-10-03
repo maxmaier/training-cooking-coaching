@@ -183,6 +183,9 @@ nav div.main-nav-desktop{
 	text-align: center;
 	@include bg-gradient-orange();
 }
+html.no-cssgradients .tile-regular .half-tile:first-child, .tile-reversed .half-tile+.half-tile{
+	background-color: #e56b1f;
+}
 .tile-regular .half-tile+.half-tile .half-tile-bg, .tile-reversed .half-tile:first-child .half-tile-bg{
 	background: url('../img/home_coach.jpg') no-repeat;
 	background-size: cover;
@@ -229,6 +232,8 @@ nav div.main-nav-desktop{
 	-webkit-transition: background-size 4s ease;
 	*/
 
+	margin-left: -10px;
+
 	webkit-transform: scale(1.0, 1.0);
     transform: scale(1.0, 1.0);
 
@@ -237,13 +242,16 @@ nav div.main-nav-desktop{
 	-ms-transition:  5s ease;
 	-o-transition:  5s ease;
 	-webkit-transition:  5s ease;
+	
 
 	
 }
 .tile-regular:hover .half-tile+.half-tile .half-tile-bg, .tile-reversed:hover .half-tile:first-child .half-tile-bg{
 	//background-size: 140%;
-	webkit-transform: scale(1.15, 1.15);
-    transform: scale(1.15, 1.15);
+	/*webkit-transform: scale(1.15, 1.15);
+    transform: scale(1.15, 1.15);*/
+    
+    margin-left: 0px;
 }
 }
 
@@ -256,6 +264,9 @@ nav div.main-nav-desktop{
 	@include box-shadow(0px 2px 5px 0px rgba(50, 50, 50, 0.75));
 	@include bg-gradient-orange();
 	
+	a{
+		text-decoration: underline;	
+	}
 	h3{
 		display: block;
 		padding-left: 5%;
@@ -271,7 +282,7 @@ nav div.main-nav-desktop{
 			font-size: 80%	
 		}	
 		a{
-			line-height: 70px;	
+			line-height: 70px;
 		}
 	}
 	.visitenkarte+p{
